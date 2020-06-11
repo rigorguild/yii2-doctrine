@@ -1,0 +1,12 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          ./../../../../vendor/doctrine/orm/doctrine-mapping.xsd">
+
+    <embeddable name="YiiDoctrineExample\DomainModel\OrderId">
+        <id name="id" type="integer">
+            <generator />
+        </id>
+    </embeddable>
+
+</doctrine-mapping>

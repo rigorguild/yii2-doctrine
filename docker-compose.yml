@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  php:
+    image: yiisoftware/yii2-php:7.4-apache
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./:/app:delegated
+    ports:
+      - '8888:80'
+  mysql:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "33306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234Abcd
+      MYSQL_USER: yiidoctrine
+      MYSQL_PASSWORD: 1234Abcd
+      MYSQL_DATABASE: yiidoctrine
