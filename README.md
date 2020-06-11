@@ -3,6 +3,7 @@
 ## Como ejecutar la aplicación
 
     docker-compose up -d
+    composer install
     php bin/doctrine-migrations migrations:migrate --no-interaction --all-or-nothing
     open http://127.0.0.1:8888/
     
@@ -27,3 +28,7 @@ Para verlas (formato JSON)
 * Los mappings de doctrine se pueden encontrar en la carpeta [`src/Infrastructure/Persistence/doctrine-mappings`](src/Infrastructure/Persistence/doctrine-mappings).
 * La configuración para la consola de doctrine reside en el archivo [`config/cli-config.php`](config/cli-config.php) (es uno de los sitios dónde Doctrine va a buscar la configuración de la consola).
 * Se ha includo integración con `Doctrine Migrations`. La configuración de las migrations (a parte de la conexión a la base de datos), reside en el archivo [`migrations.php`](config/cli-console.php). Y las migraciones se pueden encontrar en la carpeta [`migrations`](migrations).
+* Hay tres CLIs disponibles de doctrine (disponibles después de hacer `composer install`)
+    * `bin/doctrine` => Esta es la consola del ORM
+    * `bin/doctrine-dbal` => Ésta es la consola de DBAL (la capa de abstración de base de datos que usa el ORM).
+    * `bin/doctrine-migrations` => Ésta es la consola de las migrations de Doctrine.
