@@ -25,5 +25,5 @@ Para verlas (formato JSON)
 * Todo se vincula a través del DI de Yii2. La configuración la incluye el archivo [`config/di.php`](config/di.php). Este archivo hace el wiring tanto de los commands handlers y la infra, como del Entity Manager de Doctrine.
 * Los parámetros de doctrine residen en los archivos [`config/doctrine-orm.php`](config/doctrine-orm.php) y [`config/doctrine-orm_dev.php`](config/doctrine-orm_dev.php).
 * Los mappings de doctrine se pueden encontrar en la carpeta [`src/Infrastructure/Persistence/doctrine-mappings`](src/Infrastructure/Persistence/doctrine-mappings).
-* La configuración para la consola de doctrine reside en el archivo [`config/cli-console.php`](config/cli-console.php) (es uno de los sitios dónde Doctrine va a buscar la configuración de la consola).
+* La configuración para la consola de doctrine reside en el archivo [`config/cli-config.php`](config/cli-config.php) (es uno de los sitios dónde Doctrine va a buscar la configuración de la consola).
 * Se ha includo integración con `Doctrine Migrations`. La configuración de las migrations (a parte de la conexión a la base de datos), reside en el archivo [`migrations.php`](config/cli-console.php). Y las migraciones se pueden encontrar en la carpeta [`migrations`](migrations).
