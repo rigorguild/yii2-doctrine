@@ -17,9 +17,6 @@ class OrdersController extends Controller
 {
     private EmitOrderHandler $emitOrderHandler;
     private EntityManagerInterface $entityManager;
-    /**
-     * @var SerializerInterface
-     */
     private SerializerInterface $serializer;
 
     public function __construct(
